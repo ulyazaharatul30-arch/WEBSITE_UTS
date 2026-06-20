@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Dramas | K-Drama Lovers</title>
+  <link rel="icon" type="image/png" href="img/logo1.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <button id="scroll-top" aria-label="Scroll to top"><i class="bi bi-chevron-up"></i></button>
+
+  <!-- NAVBAR = Berisi menu navigasi yang ada di beranda --> 
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid px-3">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo1.png" alt="K-Drama Lovers" class="navbar-brand-img" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+          <li class="nav-item">
+            <a class="nav-link nav-home-btn" href="index.html"><i class="bi bi-house-fill"></i> Home</a>
+          </li>
+          <li class="nav-item nav-genre-dropdown dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-film"></i> Genre
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="movies.html?genre=thriller" data-genre="thriller"><span>🔍</span> Thriller</a></li>
+              <li><a class="dropdown-item" href="movies.html?genre=survival" data-genre="survival"><span>🔥</span> Survival</a></li>
+              <li><a class="dropdown-item" href="movies.html?genre=crime"    data-genre="crime"><span>🛡️</span> Crime</a></li>
+              <li><a class="dropdown-item" href="movies.html?genre=fantasy"  data-genre="fantasy"><span>🪄</span> Fantasy</a></li>
+              <li><a class="dropdown-item" href="movies.html?genre=romance"  data-genre="romance"><span>💕</span> Romance</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="movies.html">All Dramas</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+<section class="movies-hero reveal">
+      <h1 id="movies-page-title">All K-Dramas</h1>
+      <p id="movies-page-sub">Browse our full collection search, filter, and find your next obsession</p>
+    </section>
+    <!-- Hero = Berisi tampilan dan informasi singkat tentang website -->
+    
+
+    <!-- Search = Berisi pencarian untuk memudahkan pengguna dalam mengakses drama yang ingin dicari sesuai genrenya -->
+    <div style="margin-top:18px;" class="reveal">
+      <div class="search-wrapper" style="max-width:100%;">
+        <input type="text" id="movie-search" placeholder="Search by title or genre…" autocomplete="off" />
+        <i class="bi bi-search search-icon"></i>
+      </div>
+    </div>
+
+    <!-- Filter Tabs = Berisi tombol berupa cover drama untuk memudahkan pengguna dalam mengakses drama yang diinginkan tanpa harus mencari -->
+    <div class="filter-tabs reveal">
+      <button class="filter-tab active" data-filter="all">✨ All</button>
+      <button class="filter-tab" data-filter="thriller">🔍 Thriller</button>
+      <button class="filter-tab" data-filter="survival">🔥 Survival</button>
+      <button class="filter-tab" data-filter="crime">🛡️ Crime</button>
+      <button class="filter-tab" data-filter="fantasy">🪄 Fantasy</button>
+      <button class="filter-tab" data-filter="romance">💕 Romance</button>
+    </div>
+
+    <!-- Grid = berisi tata letak yang digunakan untuk menyusun semua drama dalam bentuk baris dan kolom agar terlihat lebih rapi-->
+    <div class="movies-grid" id="movies-grid">
+
+      <a class="movie-grid-card reveal" href="pages/mouse.html"
+         data-title="mouse" data-genre="thriller psychological">
+        <img src="img/mouse.jpg" alt="Mouse"
+             onerror="this.src='img/scene-mouse.jpg'" />
+        <div class="movie-grid-info">
+          <div class="movie-grid-title">Mouse (마우스)</div>
+          <span class="movie-genre-tag">Thriller</span>
+          <div class="movie-grid-stars">★★★★★</div>
+        </div>
+      </a>
+
+      <a class="movie-grid-card reveal" href="pages/the-manipulated.html"
+         data-title="the manipulated" data-genre="thriller crime psychological">
+        <img src="img/the-manipulation.jpg" alt="The Manipulated" />
+        <div class="movie-grid-info">
+          <div class="movie-grid-title">The Manipulated (조각도시)</div>
+          <span class="movie-genre-tag">Crime</span>
+          <div class="movie-grid-stars">★★★★<span style="opacity:.3">★</span></div>
+        </div>
+      </a>
+
+      <a class="movie-grid-card reveal" href="pages/all-of-us-are-dead.html"
+         data-title="all of us are dead" data-genre="survival zombie horror">
+        <img src="img/all-of.webp" alt="All of Us Are Dead"
+             onerror="this.src='img/scene-allofus.jpg'" />
+        <div class="movie-grid-info">
+          <div class="movie-grid-title">All of Us Are Dead</div>
+          <span class="movie-genre-tag">Survival</span>
+          <div class="movie-grid-stars">★★★★★</div>
+        </div>
+      </a>
+
+      <a class="movie-grid-card reveal" href="pages/a-shop-for-killers.html"
+         data-title="a shop for killers" data-genre="crime action">
+        <img src="img/the-shop.jpg" alt="A Shop for Killers"
+             onerror="this.src='img/scene-shopkillers.jpg'" />
+        <div class="movie-grid-info">
+          <div class="movie-grid-title">A Shop for Killers</div>
+          <span class="movie-genre-tag">Action / Crime</span>
+          <div class="movie-grid-stars">★★★★★</div>
+        </div>
+      </a>
+
+      <a class="movie-grid-card reveal" href="pages/boyfriend-on-demand.html"
+         data-title="boyfriend on demand" data-genre="romance fantasy">
+        <img src="img/BOYFRIEND.jpg" alt="Boyfriend On Demand" />
+        <div class="movie-grid-info">
+          <div class="movie-grid-title">Boyfriend On Demand</div>
+          <span class="movie-genre-tag">Romance</span>
+          <div class="movie-grid-stars">★★★★<span style="opacity:.3">★</span></div>
+        </div>
+      </a>
+
+      <a class="movie-grid-card reveal" href="pages/spirit-fingers.html"
+         data-title="spirit fingers" data-genre="fantasy romance slice">
+        <img src="img/Spirit.png" alt="Spirit Fingers" />
+        <div class="movie-grid-info">
+          <div class="movie-grid-title">Spirit Fingers (스피릿핑거스)</div>
+          <span class="movie-genre-tag">Slice of Life</span>
+          <div class="movie-grid-stars">★★★★<span style="opacity:.3">★</span></div>
+        </div>
+      </a>
+
+    </div>
+
+    <div id="no-results" class="no-results">
+      <p style="font-size:2rem;margin-bottom:10px;">😔</p>
+      No dramas found for that filter.<br>Try a different genre or keyword!
+    </div>
+
+  </div><!-- /page-wrap = Berisi informasi yang ada di footer -->
+
+  <footer class="footer">
+    <span class="footer-heart-icon">❤️</span>
+    <img src="img/logo1.png" alt="K-Drama Lovers" class="footer-logo-img" />
+    <p class="footer-desc">Your ultimate destination for the best Korean dramas across every genre.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="movies.html">All Dramas</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/about.ulyaa/?utm_source=ig_web_button_share_sheet" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://x.com/UlyaZ0204" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.tiktok.com/@about.ulyaa?is_from_webapp=1&sender_device=pc" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+      <a href="https://www.facebook.com/share/18fKi1wTkH/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+    </div>
+    <p class="footer-copy">Copyright &copy; 2026 K-Drama Lovers. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Update page hero title when a genre filter is active
+    (function () {
+      const genre = new URLSearchParams(window.location.search).get('genre');
+      if (!genre) return;
+      const labels = { thriller:'Thriller 🔍', survival:'Survival 🔥', crime:'Crime 🛡️', fantasy:'Fantasy 🪄', romance:'Romance 💕' };
+      const t = document.getElementById('movies-page-title');
+      const s = document.getElementById('movies-page-sub');
+      if (t && labels[genre]) t.textContent = labels[genre] + ' Dramas';
+      if (s && labels[genre]) s.textContent = 'Showing all ' + genre + ' K-Dramas in our collection';
+    })();
+  </script>
+</body>
+</html>
